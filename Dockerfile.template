@@ -1,0 +1,12 @@
+# base-image for golang on any machine using a template var
+FROM resin/%%RESIN_MACHINE_NAME%%-golang:latest
+
+# enable systemd
+ENV INITSYSTEM on
+
+RUN go get -d -u gobot.io/x/gobot/...
+
+# download DHT libraries for golang
+RUN go get -u github.com/d2r2/go-dht
+
+
