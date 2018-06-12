@@ -9,4 +9,7 @@ RUN go get -d -u gobot.io/x/gobot/...
 # download DHT libraries for golang
 RUN go get -u github.com/d2r2/go-dht
 
+RUN mkdir /go/src/blink
 
+
+COPY blink.go /go/src/blink/
